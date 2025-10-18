@@ -75,6 +75,23 @@ function setupEventListeners() {
     if (backBtn) {
         backBtn.addEventListener('click', showWelcome);
     }
+    
+    // Setup quick game links
+    setupQuickGameLinks();
+}
+
+// Setup quick game links event listeners
+function setupQuickGameLinks() {
+    const gameLinkItems = document.querySelectorAll('.game-link-item');
+    gameLinkItems.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const gameId = this.dataset.gameId;
+            if (gameId) {
+                selectGame(gameId);
+            }
+        });
+    });
 }
 
 // Setup keyboard navigation
@@ -217,6 +234,9 @@ function showWelcome() {
     document.querySelectorAll('.game-item').forEach(item => {
         item.classList.remove('active');
     });
+    
+    // Setup quick game links again (in case content was recreated)
+    setupQuickGameLinks();
     
     // Clear URL hash
     window.history.replaceState(null, null, window.location.pathname);

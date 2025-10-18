@@ -772,6 +772,73 @@ body::before {
     font-style: italic;
 }
 
+/* Quick Game Links */
+.quick-game-links {
+    margin: 30px 0;
+    padding: 25px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.03) 0%, rgba(118, 75, 162, 0.02) 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.quick-links-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.game-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.game-link-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 18px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.game-link-item:hover {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.05) 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.game-link-icon {
+    font-size: 1.5rem;
+    width: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-link-info h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #2c3e50;
+}
+
+.game-link-info p {
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin: 0;
+    font-weight: 400;
+}
+
 .guide-footer {
     text-align: center;
     margin-top: 40px;
@@ -842,6 +909,33 @@ body::before {
     .video-container iframe {
         height: 250px;
     }
+    
+    .quick-game-links {
+        margin: 20px 0;
+        padding: 20px;
+    }
+    
+    .game-links-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
+    .game-link-item {
+        padding: 12px 15px;
+    }
+    
+    .game-link-icon {
+        font-size: 1.3rem;
+        width: 25px;
+    }
+    
+    .game-link-info h4 {
+        font-size: 0.9rem;
+    }
+    
+    .game-link-info p {
+        font-size: 0.75rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -881,6 +975,28 @@ body::before {
     
     .video-description {
         font-size: 0.9rem;
+    }
+    
+    .quick-game-links {
+        margin: 15px 0;
+        padding: 15px;
+    }
+    
+    .game-link-item {
+        padding: 10px 12px;
+    }
+    
+    .game-link-icon {
+        font-size: 1.2rem;
+        width: 20px;
+    }
+    
+    .game-link-info h4 {
+        font-size: 0.85rem;
+    }
+    
+    .game-link-info p {
+        font-size: 0.7rem;
     }
 }
 
