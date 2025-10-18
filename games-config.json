@@ -1,0 +1,71 @@
+{
+  "games": [
+    {
+      "id": "2048-cupcakes",
+      "title": "2048 Cupcakes",
+      "description": "Classic 2048 game with adorable cupcake theme, perfect for all ages",
+      "icon": "🧁",
+      "url": "https://2048hub.com",
+      "iframe": true,
+      "category": "classic",
+      "difficulty": "easy",
+      "tags": ["classic", "cute", "easy", "family-friendly"]
+    },
+    {
+      "id": "hex2048",
+      "title": "Hex2048",
+      "description": "Hexagonal grid 2048 variant with more strategic gameplay",
+      "icon": "⬡",
+      "url": "https://2048hub.com/hex-2048/",
+      "iframe": true,
+      "category": "hexagonal",
+      "difficulty": "hard",
+      "tags": ["hexagonal", "challenging", "strategy", "advanced"]
+    },
+    {
+      "id": "game2048",
+      "title": "Game2048",
+      "description": "Original 2048 game, simple and easy to learn for beginners",
+      "icon": "🔢",
+      "url": "https://2048hub.com/2048/",
+      "iframe": true,
+      "category": "original",
+      "difficulty": "easy",
+      "tags": ["original", "simple", "beginner", "classic"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "classic",
+      "name": "Classic Variants",
+      "description": "Traditional 2048 game variations"
+    },
+    {
+      "id": "hexagonal",
+      "name": "Hexagonal Variants",
+      "description": "2048 games using hexagonal grids"
+    },
+    {
+      "id": "original",
+      "name": "Original Games",
+      "description": "The original 2048 game"
+    }
+  ],
+  "difficulties": [
+    {
+      "id": "easy",
+      "name": "Easy",
+      "description": "Perfect for beginners"
+    },
+    {
+      "id": "medium",
+      "name": "Medium",
+      "description": "Moderate challenge"
+    },
+    {
+      "id": "hard",
+      "name": "Hard",
+      "description": "Extremely challenging"
+    }
+  ]
+}
