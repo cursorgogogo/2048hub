@@ -9,16 +9,16 @@ const games = [
         iframe: true
     },
     {
-        id: 'game2048',
-        title: 'Game2048',
+        id: 'classic-2048',
+        title: 'Classic 2048',
         description: 'Original 2048 game, simple and easy to learn for beginners',
         icon: '🔢',
-        url: 'https://2048hub.com/2048/', // Replace with actual game URL
+        url: 'https://2048hub.com/classic-2048/', // Replace with actual game URL
         iframe: true
     },
     {
-        id: 'hex2048',
-        title: 'Hex2048',
+        id: 'hex-2048',
+        title: 'Hex 2048',
         description: 'Hexagonal grid 2048 variant with more strategic gameplay',
         icon: '⬡',
         url: 'https://2048hub.com/hex-2048/', // Replace with actual game URL

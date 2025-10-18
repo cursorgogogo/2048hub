@@ -24,10 +24,10 @@
     },
     {
       "id": "game2048",
-      "title": "Game2048",
+      "title": "Classic 2048",
       "description": "Original 2048 game, simple and easy to learn for beginners",
       "icon": "🔢",
-      "url": "https://2048hub.com/2048/",
+      "url": "https://2048hub.com/classic-2048/",
       "iframe": true,
       "category": "original",
       "difficulty": "easy",
