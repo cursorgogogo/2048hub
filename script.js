@@ -115,7 +115,7 @@ function showGame(game) {
     currentGameTitle.textContent = game.title;
     gameHeader.style.display = 'flex';
     
-    // Hide welcome message and guide content when showing game
+    // Hide welcome message and guide content
     const welcomeMessage = document.querySelector('.welcome-message');
     if (welcomeMessage) {
         welcomeMessage.style.display = 'none';
@@ -124,8 +124,15 @@ function showGame(game) {
         guideContent.style.display = 'none';
     }
     
-    // Clear game container
-    gameFrameContainer.innerHTML = '';
+    // Clear any existing iframe content
+    const existingIframe = gameFrameContainer.querySelector('.game-iframe');
+    if (existingIframe) {
+        existingIframe.remove();
+    }
+    const existingLoading = gameFrameContainer.querySelector('.loading');
+    if (existingLoading) {
+        existingLoading.remove();
+    }
     
     if (game.iframe) {
         // Show loading animation
@@ -187,9 +194,23 @@ function showWelcome() {
     currentGame = null;
     gameHeader.style.display = 'none';
     
+    // Show welcome message and guide content
     const welcomeMessage = document.querySelector('.welcome-message');
     if (welcomeMessage) {
         welcomeMessage.style.display = 'flex';
+    }
+    if (guideContent) {
+        guideContent.style.display = 'block';
+    }
+    
+    // Remove any existing iframe content
+    const existingIframe = gameFrameContainer.querySelector('.game-iframe');
+    if (existingIframe) {
+        existingIframe.remove();
+    }
+    const existingLoading = gameFrameContainer.querySelector('.loading');
+    if (existingLoading) {
+        existingLoading.remove();
     }
     
     // Remove active state from all game items
