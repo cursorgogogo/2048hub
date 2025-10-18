@@ -27,7 +27,7 @@ const games = [
 ];
 
 // DOM elements (will be initialized after DOM loads)
-let gameList, gameContainer, gameHeader, currentGameTitle, backBtn, gameFrameContainer;
+let gameList, gameContainer, gameHeader, currentGameTitle, backBtn, gameFrameContainer, guideContent;
 
 let currentGame = null;
 
@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
     currentGameTitle = document.getElementById('currentGameTitle');
     backBtn = document.getElementById('backBtn');
     gameFrameContainer = document.getElementById('gameFrameContainer');
+    guideContent = document.getElementById('guideContent');
     
     renderGameList();
     setupEventListeners();
@@ -104,7 +105,6 @@ function selectGame(gameId) {
     // Show game
     showGame(game);
     
-    // Update URL hash for SEO
     window.location.hash = gameId;
 }
 
@@ -114,6 +114,15 @@ function showGame(game) {
     
     currentGameTitle.textContent = game.title;
     gameHeader.style.display = 'flex';
+    
+    // Hide welcome message and guide content when showing game
+    const welcomeMessage = document.querySelector('.welcome-message');
+    if (welcomeMessage) {
+        welcomeMessage.style.display = 'none';
+    }
+    if (guideContent) {
+        guideContent.style.display = 'none';
+    }
     
     // Clear game container
     gameFrameContainer.innerHTML = '';
@@ -178,28 +187,10 @@ function showWelcome() {
     currentGame = null;
     gameHeader.style.display = 'none';
     
-    // Clear game container and show welcome message
-    gameFrameContainer.innerHTML = `
-        <div class="welcome-message">
-            <div class="welcome-icon">🎮</div>
-            <h2>Welcome to 2048 Hub</h2>
-            <p>Choose a 2048 game from the left menu to start playing!</p>
-            <div class="features">
-                <div class="feature">
-                    <span class="feature-icon">⚡</span>
-                    <span>No download required</span>
-                </div>
-                <div class="feature">
-                    <span class="feature-icon">🎯</span>
-                    <span>Multiple 2048 variants</span>
-                </div>
-                <div class="feature">
-                    <span class="feature-icon">📱</span>
-                    <span>Mobile & desktop ready</span>
-                </div>
-            </div>
-        </div>
-    `;
+    const welcomeMessage = document.querySelector('.welcome-message');
+    if (welcomeMessage) {
+        welcomeMessage.style.display = 'flex';
+    }
     
     // Remove active state from all game items
     document.querySelectorAll('.game-item').forEach(item => {
