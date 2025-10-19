@@ -17,11 +17,27 @@ const games = [
         iframe: true
     },
     {
+        id: 'doge-2048',
+        title: 'Doge 2048',
+        description: 'Doge 2048 game with Doge meme tiles, perfect for all ages',
+        icon: '🐶',
+        url: 'https://2048hub.com/doge-2048/', // Replace with actual game URL
+        iframe: true
+    },
+    {
         id: 'hex-2048',
         title: 'Hex 2048',
         description: 'Hexagonal grid 2048 variant with more strategic gameplay',
         icon: '⬡',
         url: 'https://2048hub.com/hex-2048/', // Replace with actual game URL
+        iframe: true
+    },
+    {
+        id: 'schulte-grid',
+        title: 'Schulte Grid',
+        description: 'Mental training game with a grid of numbers',
+        icon: '🧠',
+        url: 'https://2048hub.com/schulte-grid/', // Replace with actual game URL
         iframe: true
     }
 ];

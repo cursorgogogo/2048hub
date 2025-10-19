@@ -32,6 +32,28 @@
       "category": "original",
       "difficulty": "easy",
       "tags": ["original", "simple", "beginner", "classic"]
+    },
+    {
+      "id": "doge-2048",
+      "title": "Doge 2048",
+      "description": "Doge 2048 game with Doge meme tiles, perfect for all ages",
+      "icon": "🐶",
+      "url": "https://2048hub.com/doge-2048/",
+      "iframe": true,
+      "category": "doge",
+      "difficulty": "easy",
+      "tags": ["doge", "meme", "fun", "easy"]
+    },
+    {
+      "id": "schulte-grid",
+      "title": "Schulte Grid",
+      "description": "Mental training game with a grid of numbers",
+      "icon": "🧠",
+      "url": "https://2048hub.com/schulte-grid/",
+      "iframe": true,
+      "category": "schulte",
+      "difficulty": "medium",
+      "tags": ["schulte", "mental", "training", "medium"]
     }
   ],
   "categories": [
@@ -44,6 +66,33 @@
       "id": "hexagonal",
       "name": "Hexagonal Variants",
       "description": "2048 games using hexagonal grids"
+    },
+    {
+      "id": "doge",
+      "name": "Doge Variants",
+      "description": "2048 games using Doge meme tiles"
+    },
+    {
+      "id": "original",
+      "name": "Original Games",
+      "description": "The original 2048 game"
+    }
+  ],
+  "tags": [
+    {
+      "id": "classic",
+      "name": "Classic Variants",
+      "description": "Traditional 2048 game variations"
+    },
+    {
+      "id": "hexagonal",
+      "name": "Hexagonal Variants",
+      "description": "2048 games using hexagonal grids"
+    },
+    {
+      "id": "doge",
+      "name": "Doge Games",
+      "description": "2048 games using Doge meme tiles"
     },
     {
       "id": "original",
