@@ -25,6 +25,14 @@ const games = [
         iframe: true
     },
     {
+        id: 'couch-2048',
+        title: 'Couch 2048',
+        description: 'Couch 2048 game with couch theme, perfect for all ages',
+        icon: '🛋️',
+        url: 'https://2048hub.com/couch-2048/', // Replace with actual game URL
+        iframe: true
+    },
+    {
         id: 'hex-2048',
         title: 'Hex 2048',
         description: 'Hexagonal grid 2048 variant with more strategic gameplay',
