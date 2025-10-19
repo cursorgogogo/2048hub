@@ -31,14 +31,6 @@ const games = [
         icon: '⬡',
         url: 'https://2048hub.com/hex-2048/', // Replace with actual game URL
         iframe: true
-    },
-    {
-        id: 'schulte-grid',
-        title: 'Schulte Grid',
-        description: 'Mental training game with a grid of numbers',
-        icon: '🧠',
-        url: 'https://2048hub.com/schulte-grid/', // Replace with actual game URL
-        iframe: true
     }
 ];
 
@@ -105,6 +97,8 @@ function setupQuickGameLinks() {
             const gameId = this.dataset.gameId;
             if (gameId) {
                 selectGame(gameId);
+            } else {
+                location.href = this.href;
             }
         });
     });
