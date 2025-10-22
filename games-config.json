@@ -12,6 +12,17 @@
       "tags": ["classic", "cute", "easy", "family-friendly"]
     },
     {
+      "id": "taylor-swift-2048",
+      "title": "Taylor Swift 2048",
+      "description": "Taylor Swift 2048 game with Taylor Swift theme, perfect for all ages",
+      "icon": "🎤",
+      "url": "https://2048hub.com/taylor-swift-2048/",
+      "iframe": true,
+      "category": "taylor-swift",
+      "difficulty": "easy",
+      "tags": ["taylor-swift", "music", "fun", "easy"]
+    },
+    {
       "id": "hex2048",
       "title": "Hex2048",
       "description": "Hexagonal grid 2048 variant with more strategic gameplay",
