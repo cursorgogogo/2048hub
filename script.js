@@ -360,28 +360,3 @@ window.GameHub = {
     selectGame: selectGameWithTracking,
     showWelcome
 };
-
-// Performance optimization: Preload game iframes on hover
-document.addEventListener('DOMContentLoaded', function() {
-    const gameItems = document.querySelectorAll('.game-item');
-    gameItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            const gameId = this.dataset.gameId;
-            const game = games.find(g => g.id === gameId);
-            if (game && game.iframe) {
-                // Preload iframe (hidden)
-                const preloadIframe = document.createElement('iframe');
-                preloadIframe.style.display = 'none';
-                preloadIframe.src = game.url;
-                document.body.appendChild(preloadIframe);
-                
-                // Remove after 5 seconds
-                setTimeout(() => {
-                    if (preloadIframe.parentNode) {
-                        preloadIframe.parentNode.removeChild(preloadIframe);
-                    }
-                }, 5000);
-            }
-        });
-    });
-});
