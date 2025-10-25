@@ -33,19 +33,19 @@ const games = [
         iframe: true
     },
     {
-        id: '2048-remastered',
-        title: '2048 Remastered',
-        description: '2048 Remastered game with 2048 theme, perfect for all ages',
-        icon: '🎮',
-        url: 'https://2048hub.com/2048-remastered/', // Replace with actual game URL
-        iframe: true
-    },
-    {
         id: 'card-2048',
         title: 'Card 2048',
         description: 'Card 2048 game with card numbers, perfect for all ages',
         icon: '🃏',
         url: 'https://2048hub.com/card-2048/', // Replace with actual game URL
+        iframe: true
+    },
+    {
+        id: '2048-remastered',
+        title: '2048 Remastered',
+        description: '2048 Remastered game with 2048 theme, perfect for all ages',
+        icon: '🎮',
+        url: 'https://2048hub.com/2048-remastered/', // Replace with actual game URL
         iframe: true
     },
     {
