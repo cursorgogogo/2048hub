@@ -532,7 +532,6 @@ body::before {
     .sidebar {
         width: 100%;
         height: auto;
-        max-height: 120px;
         order: 2;
         position: fixed;
         left: 0;
@@ -552,7 +551,7 @@ body::before {
         margin-left: 0;
         width: 100%;
         max-width: 100%;
-        padding-bottom: 120px;
+        padding-bottom: 90px;
         overflow-x: hidden;
     }
     
@@ -562,7 +561,7 @@ body::before {
     }
     
     .game-menu {
-        padding: 8px 0;
+        padding: 10px 0;
     }
     
     .menu-title {
@@ -570,29 +569,43 @@ body::before {
     }
     
     .game-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 6px;
-        padding: 0 10px;
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        padding: 0 15px;
         overflow-x: auto;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
+        overflow-y: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+        -webkit-overflow-scrolling: touch;
     }
     
     .game-list::-webkit-scrollbar {
-        display: none;
+        height: 4px;
+    }
+    
+    .game-list::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.05);
+        border-radius: 2px;
+    }
+    
+    .game-list::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
     }
     
     .game-item {
         flex-direction: column;
         text-align: center;
-        padding: 8px 6px;
+        padding: 10px 12px;
         border: 1px solid rgba(0, 0, 0, 0.08);
-        border-radius: 8px;
+        border-radius: 10px;
         background: rgba(255, 255, 255, 0.6);
         backdrop-filter: blur(5px);
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
+        min-width: 80px;
     }
     
     .game-item:hover {
@@ -616,6 +629,10 @@ body::before {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    
+    .game-item .game-info {
+        width: 100%;
     }
     
     .game-title {
@@ -649,25 +666,23 @@ body::before {
 }
 
 @media (max-width: 480px) {
-    .sidebar {
-        max-height: 100px;
-    }
-    
     .main-content {
         height: 100vh;
         margin-left: 0;
         width: 100%;
         max-width: 100%;
-        padding-bottom: 100px;
+        padding-bottom: 85px;
         overflow-x: hidden;
     }
     
     .game-list {
-        grid-template-columns: repeat(2, 1fr);
+        padding: 0 10px;
+        gap: 6px;
     }
     
     .game-item {
-        padding: 6px 4px;
+        padding: 8px 10px;
+        min-width: 70px;
     }
     
     .game-icon {
