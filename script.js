@@ -210,6 +210,19 @@ function showGame(game) {
         // iframe load event
         iframe.onload = function() {
             loading.remove();
+            
+            // Hide sidebar on mobile when game loads
+            const sidebar = document.querySelector('.sidebar');
+            const mainContent = document.querySelector('.main-content');
+            if (window.innerWidth <= 768) {
+                if (sidebar) {
+                    sidebar.style.transform = 'translateY(100%)';
+                    sidebar.style.transition = 'transform 0.3s ease';
+                }
+                if (mainContent) {
+                    mainContent.style.paddingBottom = '0';
+                }
+            }
         };
         
         // iframe error handling
@@ -276,6 +289,23 @@ function showWelcome() {
     document.querySelectorAll('.game-item').forEach(item => {
         item.classList.remove('active');
     });
+    
+    // Show sidebar on mobile when returning to home
+    const sidebar = document.querySelector('.sidebar');
+    const mainContent = document.querySelector('.main-content');
+    if (window.innerWidth <= 768) {
+        if (sidebar) {
+            sidebar.style.transform = 'translateY(0)';
+            sidebar.style.transition = 'transform 0.3s ease';
+        }
+        if (mainContent) {
+            if (window.innerWidth <= 480) {
+                mainContent.style.paddingBottom = '85px';
+            } else {
+                mainContent.style.paddingBottom = '90px';
+            }
+        }
+    }
     
     // Setup quick game links again (in case content was recreated)
     setupQuickGameLinks();
